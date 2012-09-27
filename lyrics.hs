@@ -23,5 +23,5 @@ songGet artist song = "http://www.azlyrics.com/lyrics/"
                       ++ artist ++"/"++ song ++ ".html"
 
 -- the regex
-macheter = "(<!-- start of lyrics -->[a-zA-Z.\n\t\b\r<br /> ',(?!$%)]*<!-- end of lyrics -->)"
+macheter = "(<!-- start of lyrics -->(.|\n)*<!-- end of lyrics -->)"
 

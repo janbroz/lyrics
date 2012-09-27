@@ -1,8 +1,6 @@
 
-
 -- lyrics
--- Get the lyrics for a song from azlyrics, a dirty script
--- to display lyrics from songs.
+-- Get the lyrics for a song from azlyrics
 
 import Network.Curl
 import System.Environment
@@ -24,5 +22,6 @@ main = do
 songGet artist song = "http://www.azlyrics.com/lyrics/"
                       ++ artist ++"/"++ song ++ ".html"
 
+-- the regex
 macheter = "(<!-- start of lyrics -->[a-zA-Z.\n\t\b\r<br /> ',(?!$%)]*<!-- end of lyrics -->)"
 
